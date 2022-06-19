@@ -1,0 +1,11 @@
+.item-list {
+  display: flex;
+  flex-flow: column;
+  margin: 1.5rem auto
+}
+
+.item-tile {
+  display: flex;
+  margin: 0 auto;
+  gap: 1rem
+}

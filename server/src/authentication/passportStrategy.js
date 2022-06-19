@@ -1,5 +1,4 @@
 import local from "passport-local";
-
 import User from "../models/User.js";
 
 const authHandler = (email, password, done) => {
