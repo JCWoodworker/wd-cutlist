@@ -1,8 +1,8 @@
 import React, { useState } from "react"
+import { getNewId } from "../../services/getNewId"
 
 export const ItemForm = (props) => {
   const [newItem, setNewItem] = useState({
-    id: Math.floor(Math.random() * 1000),
     type: "",
     height: "",
     width: "",
@@ -21,7 +21,6 @@ export const ItemForm = (props) => {
 
   const clearForm = () => {
     setNewItem({
-      id: "",
       type: "",
       height: "",
       width: "",

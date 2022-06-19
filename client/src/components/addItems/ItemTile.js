@@ -4,7 +4,6 @@ const ItemTile = ({ item, deleteItem }) => {
 
   const handleDeleteClick = event => {
     event.preventDefault()
-    debugger
     deleteItem(item)
   }
 

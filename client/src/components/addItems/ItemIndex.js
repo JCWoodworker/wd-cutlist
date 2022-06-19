@@ -16,9 +16,9 @@ const ItemIndex = (props) => {
   }
 
   const deleteItem = itemToDelete => {
-    // debugger
-    // setItemList(itemList.filter(item => {
-    //   return item != itemToDelete
+    setItemList(itemList.filter(item => {
+      return item != itemToDelete
+    }))
   }
 
   let itemTiles = null
