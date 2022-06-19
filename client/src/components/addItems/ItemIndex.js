@@ -2,13 +2,10 @@ import { useEffect, useState } from "react"
 import React from "react"
 import ItemTile from "./ItemTile"
 import ItemForm from "./itemForm"
+import CutlistIndex from "./showCutlist/CutlistIndex"
 
 const ItemIndex = (props) => {
-  const [itemList, setItemList] = useState([
-    {id: 1, type: "Door", height: 82, width: 42, quantity: 2},
-    {id: 2, type: "Window", height: 48, width: 36, quantity: 4},
-    {id: 3, type: "Window", height: 48, width: 72, quantity: 1}
-  ])
+  const [itemList, setItemList] = useState([])
 
   const addNewItem = itemToAdd => {
     setItemList([...itemList, itemToAdd])
@@ -45,6 +42,9 @@ const ItemIndex = (props) => {
           addNewItem={addNewItem}
         />
       </div>
+      <CutlistIndex
+        itemList={itemList}
+      />
     </>
   )
 }
