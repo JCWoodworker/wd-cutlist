@@ -1,9 +1,15 @@
 export const createCutlist = itemList => {
-  const cuts = itemList.map(item => {
-    let heights = parseFloat(item.height) + 10
-    let widths = parseFloat(item.width) + 10
+  let heightsList = []
+  let widthsList = []
+  let cuts = []
+
+  itemList.forEach(item => {
+
+    let heights = parseFloat(item.height) + 12
+    let widths = parseFloat(item.width) + 12
     let quantities = item.quantity * 2
-    return ({heights, widths, quantities})
+    heightsList.push({ heights, quantities })
+    widthsList.push({ widths, quantities })
   })
   return cuts
 }

@@ -4,7 +4,9 @@ import { createCutlist } from "../../../services/createCutlist"
 
 const CutlistIndex = props => {
   // const [cutlist, setCutlist] = useState([])
+  debugger
   const cuts = createCutlist(props.itemList)
+  debugger
   const cutlistTiles = cuts.map(item => {
     return (
       <CutlistTile
@@ -15,6 +17,7 @@ const CutlistIndex = props => {
 
   return (
     <>
+      <h3>CUTLIST:</h3>
       {cutlistTiles}
     </>
   )

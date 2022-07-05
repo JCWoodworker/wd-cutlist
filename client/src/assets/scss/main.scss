@@ -3,7 +3,8 @@
 @include foundation-everything;
 @import "./itemIndex.scss";
 @import "./forms.scss";
-// place global css here
+@import "./cutlistIndex.scss";
+
 *,
 *::before,
 *::after {

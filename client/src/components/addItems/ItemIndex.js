@@ -5,7 +5,11 @@ import ItemForm from "./itemForm"
 import CutlistIndex from "./showCutlist/CutlistIndex"
 
 const ItemIndex = (props) => {
-  const [itemList, setItemList] = useState([])
+  const [itemList, setItemList] = useState([
+    {type: "door", height: 33, width: 44, quantity: 2},
+    {type: "window", height: 33, width: 44, quantity: 8},
+    {type: "window", height: 45, width: 72, quantity: 4},
+  ])
 
   const addNewItem = itemToAdd => {
     setItemList([...itemList, itemToAdd])
@@ -23,7 +27,7 @@ const ItemIndex = (props) => {
     itemTiles = itemList.map(item => {
       return (
         <ItemTile
-        key={Math.floor(Math.random() * 10000)}
+        key={Math.floor(Math.random() * 1000000)}
         item={item}  
         deleteItem={deleteItem}    
         />
@@ -42,9 +46,11 @@ const ItemIndex = (props) => {
           addNewItem={addNewItem}
         />
       </div>
-      <CutlistIndex
-        itemList={itemList}
-      />
+      <div className="cutlist-container">
+        <CutlistIndex
+          itemList={itemList}
+        />
+      </div>
     </>
   )
 }
