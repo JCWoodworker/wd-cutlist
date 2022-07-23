@@ -1,13 +1,24 @@
 .form-container {
   margin: 0 auto;
   max-width: 100%;
+  padding: 0.5rem;
 }
 
-.all-buttons {
-
+#all-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 75px;
 }
 
 .new-item-form {
   display: flex;
-  margin: 0 auto
+  flex-flow: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 400px
+}
+
+input {
+  margin: 0 auto;
 }

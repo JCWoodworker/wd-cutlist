@@ -22,7 +22,7 @@ const TopBar = ({ user }) => {
 
   return (
     <div className="top-bar">
-      <div className="top-bar-left">
+      {/* <div className="top-bar-left">
         <ul className="menu">
           <li className="menu-text">Trim Calculator</li>
           <li>
@@ -32,7 +32,7 @@ const TopBar = ({ user }) => {
       </div>
       <div className="top-bar-right">
         <ul className="menu">{user ? authenticatedListItems : unauthenticatedListItems}</ul>
-      </div>
+      </div> */}
     </div>
   );
 };

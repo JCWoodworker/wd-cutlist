@@ -33,7 +33,7 @@ const App = (props) => {
         <TopBar user={currentUser} />
         <Switch>
           <Route exact path="/">
-            <h2>Window/Door Trim Cut List Calculator</h2>
+            <h2 className="main-title">Window/Door Trim Cut List Calculator</h2>
             <ItemIndex />
           </Route>
           <Route exact path="/users/new" component={RegistrationForm} />
