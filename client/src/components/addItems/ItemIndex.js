@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import React from "react"
 import ItemTile from "./ItemTile"
-import ItemForm from "./itemForm"
+import ItemForm from "./ItemForm"
 import CutlistIndex from "./showCutlist/CutlistIndex"
 
 const ItemIndex = (props) => {
