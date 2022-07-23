@@ -2,12 +2,10 @@ import React, { useState } from "react"
 import CutlistTile from "./CutlistTile"
 import { createCutlist } from "../../../services/createCutlist"
 
-const CutlistIndex = props => {
-  // const [cutlist, setCutlist] = useState([])
-  debugger
-  const cuts = createCutlist(props.itemList)
-  debugger
+const CutlistIndex = ({ itemList }) => {
+  const cuts = createCutlist(itemList)
   const cutlistTiles = cuts.map(item => {
+
     return (
       <CutlistTile
         item={item}

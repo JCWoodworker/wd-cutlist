@@ -1,11 +1,14 @@
 import React from "react"
 
 const CutlistTile = ({ item }) => {
-  
+  let piece = null
+  let title = "Heights"
+
+  item.heights? piece = item.heights : piece = item.widths
+
   return (
     <>
-      <p>{item.heights}" x {item.quantities}</p>
-      <p>{item.widths}" x {item.quantities}</p>
+      <p>{piece}" x {item.quantities}</p>
     </>
   )
 }

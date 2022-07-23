@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, createContext } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { hot } from "react-hot-loader/root"
 
@@ -10,6 +10,7 @@ import TopBar from "./layout/TopBar"
 import ItemIndex from "./addItems/ItemIndex"
 
 const App = (props) => {
+  const [string, setString] = useState("Test String")
   const [currentUser, setCurrentUser] = useState(undefined)
   const fetchCurrentUser = async () => {
     try {
@@ -24,18 +25,22 @@ const App = (props) => {
     fetchCurrentUser()
   }, [])
 
+  const stringContext = createContext()
+
   return (
-    <Router>
-      <TopBar user={currentUser} />
-      <Switch>
-        <Route exact path="/">
-          <h2>Window/Door Trim Cut List Calculator</h2>
-          <ItemIndex />
-        </Route>
-        <Route exact path="/users/new" component={RegistrationForm} />
-        <Route exact path="/user-sessions/new" component={SignInForm} />
-      </Switch>
-    </Router>
+    <stringContext.Provider value={string}>
+      <Router>
+        <TopBar user={currentUser} />
+        <Switch>
+          <Route exact path="/">
+            <h2>Window/Door Trim Cut List Calculator</h2>
+            <ItemIndex />
+          </Route>
+          <Route exact path="/users/new" component={RegistrationForm} />
+          <Route exact path="/user-sessions/new" component={SignInForm} />
+        </Switch>
+      </Router>
+    </stringContext.Provider>
   )
 }
 
